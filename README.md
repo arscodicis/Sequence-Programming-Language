@@ -1,31 +1,40 @@
-# CustomProgrammingLanguage
+# The Sequence Programming Language
 
-Semestral work for Programming Language Theory. The application is used for parsing my own programming language called V++.
+This is a programming language developed mostly for fun, as well as to teach basic text-based programming. It uses a mostly familiar syntax to those who have programmed in any other programming language. It is a modified version of CustomProgrammingLanguage.
 
-# What I Learned
+# Getting Set up
+Right now, Sequence is only avaliable on macOS in this repo, but Windows support is coming. You can just build the .sln on Windows, and it will generate a useable executable.
+I recommend addint the seq executable to PATH, as you can learn how at this link: https://wpbeaches.com/how-to-add-to-the-shell-path-in-macos-using-terminal/ Add the /netcoreapp3.1/ folder for the location.
 
-* EBNF syntax
-* Basic principles of how programming languages are created.
+# Using
+To execute Sequence in terminal, navigate to the directory containing Sequence, and type `./seqc /path/to/file.seq`. (Or run `seqc /path/to/file.seq` if it is in the PATH.)
 
-# V++ Syntax Test
+IMPORTANT: Sequence only reads .seq files in plain-text. Make sure your extension is .seq!
+
+# Basics
+Every .seq file must include a main method, as with many other programming languages. An example is as follows:
+
 ```
-integer myVariableFive;
-string appendedString = "test of appending" + " string and continue" + " later";
-integer counter = 0;
-
-recursiveMethod(integer firstIntegerParameter, string secondStringParameter)
-{
-	println(secondStringParameter);
-	println(firstIntegerParameter);
-	counter = counter + 1;
-	if(counter <= 3)
-	{
-		run recursiveMethod(counter, "Counter value:");
-	}
-}
 program()
 {
-	myVariableFive = 5;
+	println("Hello world!");	
+	#! Comment!
+}
+```
+
+In this case `program(){}` is like the `main()` method in many _****many****_ programming languages.
+
+# Syntax
+
+#### Keywords
+
+`#!`: Comment. Acts like any other comment.
+
+`println`: Can print text `println("hello");` as well as `println(myvariable);` and `println("text" + "text2"`, as well as math: `println(5 + 5 * 8 - 6);`
+
+`forcycle`: Operates as your typical `foreach` statement.
+```
+myVariableFive = 5;
 	forcycle(integer i = 0, i < 2, i++)
 	{
 		forcycle(integer j = 0, j < 2, j++)
@@ -38,6 +47,31 @@ program()
 			}
 		println("First loop!");
 	}
+```
+`if-else`: Operates like your average `if-else` statment.
+```
+if(counter + 2 < 4)
+	{
+		println("Yahoo, condition is true!");
+	}
+	else
+	{
+		println("Ouch, condition is false");
+	}
+```
+
+#### Variables
+
+`integer`: Works like this: `integer myInt = 0;` Can be modified. E.G.
+
+```
+#! This is the integer to modify.
+integer counter = 0;
+
+
+program()
+{
+	#! Modification is here:
 	if(counter + 2 < 4)
 	{
 		println("Yahoo, condition is true!");
@@ -46,124 +80,41 @@ program()
 	{
 		println("Ouch, condition is false");
 	}
-	if(6 > 5)
-	{
-		println("6 is indeed higher than 5!");
-		if(6 > 4)
-		{
-			println("And also, 6 is higher than 4, NESTED CONDITION!");
-		
-			forcycle(integer i = 0, i < 3, i++)
-			{
-				println("You got through 2 conditions, congratulations!");
-			}
-		}
-	}
-	println(appendedString);
-	println("Test of order operations, 5 + 5 * 8 - 6 is:");
-	println(5 + 5 * 8 - 6);
-	run recursiveMethod(50, "Hello from recursive method!");
-	run PrintMyFriends("John", "Mona", "Lisa", "Denver", "Detroit");
+	
 }
+```
 
-PrintMyFriends(string p1, string p2, string p3, string p4, string p5)
+`string`: Declaration: `string myString = "content";`. Strings can be modified: 
+
+```
+program()
 {
-	println("My friends are:");
-	println(p1);
-	println(p2);
-	println(p3);
-	println(p4);
-	println(p5);
+    string myName = "Bob";
+    string newName = myName + " , hi!";
+    println(newName);
 }
 ```
-# EBNF representation of V++
+
+#### Functions
+
+You can declare custom functions using basic syntax like so:
+
 ```
-grammar V++;
+#! Functions can take integers as well.
+printNames(string n1, string n2, string n3, string n4, string n5)
+{
+	println("Names:");
+	println(n1);
+	println(n2);
+	println(n3);
+	println(n4);
+	println(n5);
+}
 
-program :=
-    {var_definition},
-    "program()
-    "{",
-	{statement},
-	{method_call},
-    "}"
-;
-
-function_call :=
-    "run", 
-    ("println", "(", {(identifier | arithmetic_statement) | string)}, ")")
-    ),
-    ";"
-;
-
-statement :=
-    (var_definition, ";")
-    | logic_statement
-    | loop_statement
-    | (method_call, ";")
-    | "{" logic statement "}"
-;
-
-logic_statement :=
-    "if", paren_expr, statement, [("else"), paren_expr, statement)], "else", statement
-;
-
-paren_expr :=
-    "(" boolean_expr ")"
-;
-
-loop_statement :=
-    "forcycle", "(" {integer, identifier, "=", integer "," idientifier, expr, integer, ("++" | "--" )")",
-    "{"
-	{statement}
-    "}"
-;
-
-boolean_expr :=
-    expr
-    | (identifier | boolean_expr), ("==" | "!="), (boolean_expr | identifier)
-;
-
-expr:=
-    sum, "<", sum
-    | sum, ">", sum
-    | sum, "<=", sum
-    | sum, ">=", sum
-    | sum, "==", sum
-    | sum, "!=", sum
-;
-sum :=
-    arithmetic_term
-    | sum, "+" term
-    | sum, "-" term
-;
-
-arithmetic_term :=
-    factor, {("*" | "/"), factor}
-;
-
-factor :=
-    identifier
-    | number
-;
-
-var_definition :=
-    data_type, identifier,
-    [("=", string | integer)],
-    ";"
-;
-
-identifier := 
-    /[a-zA-Z$_][a-zA-Z0-9$_]*/
-;
-
-integer :=
-    ["-"], digit, [{digit}], ["." , {digit}];
-;
-
-digit := {"0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"};
-
-string :=
-    '"', /[a-zA-Z0-9$_]*/, '"'
-;
 ```
+
+And then call them like:
+
+`run printNames("Name1", "Name2", "Name3", "Name4", "Name5");`
+
+This line can be run anywhere, even inside other functions.
