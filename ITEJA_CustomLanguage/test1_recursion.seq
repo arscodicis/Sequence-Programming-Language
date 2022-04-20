@@ -1,0 +1,23 @@
+integer globalCounter = 0;
+
+program()
+{
+	println("TEST1 - RECURSION");
+	println("######################");
+	println("");
+	run methodCalledRecursively("Hello World!");
+}
+methodCalledRecursively(string helloString)
+{
+	globalCounter = globalCounter + 1;
+	
+	if (globalCounter < 5)
+	{
+		println(helloString);
+		run methodCalledRecursively("Hello World!");
+	}
+	else
+	{
+		println("Enough of recursion!");
+	}
+}

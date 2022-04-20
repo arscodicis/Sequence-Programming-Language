@@ -1,0 +1,31 @@
+program()
+{
+	println("TEST3 - CONDITIONS");
+	println("##################");
+	println("");
+
+	forcycle(integer num = 0, num < 10, num++)
+	{
+		if (num < 5)
+		{
+			println("We're in the first half!");
+		}
+		else
+		{
+			println("We're in the second half!");
+		}
+	}
+
+	integer localVariable = 5 + 10 * 6 / 2;
+
+	if (localVariable + 2 < 10)
+	{
+		println("localVariable + 2 is lower than 10");
+		println(localVariable);
+	}
+	else
+	{
+		println("localVariable + 2 is higher than 10");
+		println(localVariable);
+	}
+}

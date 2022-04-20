@@ -1,0 +1,21 @@
+string globalVariable = "I am " + "global variable!";
+
+program()
+{
+	string localVariableMethod = "I am local method variable!";
+	
+	forcycle(integer loopVar = 0, loopVar < 5, loopVar++)
+	{
+		string localVariableForLoop = "I am local for loop variable!";
+		if (loopVar == 4)
+		{
+			println("Hey, I can access all three variables! Global, Method local variables, forcycle one and forloop inner counter!");
+			println(globalVariable);
+			println(localVariableMethod);
+			println(localVariableForLoop);
+			println(loopVar);
+		}
+	}
+	
+	println("But I don't have access to forloop variable outside");
+}
