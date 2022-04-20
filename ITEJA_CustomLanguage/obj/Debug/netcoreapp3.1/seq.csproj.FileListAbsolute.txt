@@ -1,0 +1,15 @@
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/bin/Debug/netcoreapp3.1/test4_variables.vpp
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/bin/Debug/netcoreapp3.1/seq
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/bin/Debug/netcoreapp3.1/seq.deps.json
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/bin/Debug/netcoreapp3.1/seq.runtimeconfig.json
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/bin/Debug/netcoreapp3.1/seq.runtimeconfig.dev.json
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/bin/Debug/netcoreapp3.1/seq.dll
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/bin/Debug/netcoreapp3.1/seq.pdb
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/obj/Debug/netcoreapp3.1/seq.csproj.AssemblyReference.cache
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/obj/Debug/netcoreapp3.1/seq.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/obj/Debug/netcoreapp3.1/seq.AssemblyInfoInputs.cache
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/obj/Debug/netcoreapp3.1/seq.AssemblyInfo.cs
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/obj/Debug/netcoreapp3.1/seq.csproj.CoreCompileInputs.cache
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/obj/Debug/netcoreapp3.1/seq.dll
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/obj/Debug/netcoreapp3.1/seq.pdb
+/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/obj/Debug/netcoreapp3.1/seq.genruntimeconfig.cache

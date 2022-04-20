@@ -1,0 +1,14 @@
+#! If-else
+program() {
+	integer localVariable = 5 + 10 * 6 / 2;
+
+	if (localVariable + 2 < 10)
+	{
+		println("localVariable + 2 is lower than 10");
+		println(localVariable);
+	}
+	else
+	{
+		println("localVariable + 2 is higher than 10");
+		println(localVariable);
+	}}

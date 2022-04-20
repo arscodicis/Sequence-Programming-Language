@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/SequenceLang.csproj",
-      "projectName": "SequenceLang",
-      "projectPath": "/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/SequenceLang.csproj",
+      "projectUniqueName": "/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/seqc.csproj",
+      "projectName": "seqc",
+      "projectPath": "/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/seqc.csproj",
       "packagesPath": "/Users/pirux/.nuget/packages/",
       "outputPath": "/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/obj/",
       "projectStyle": "PackageReference",

@@ -9,15 +9,6 @@
     <None Update="code.vpp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="test1_recursion.vpp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="test2_cycles.vpp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="test3_conditions.vpp">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="test4_complex.vpp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

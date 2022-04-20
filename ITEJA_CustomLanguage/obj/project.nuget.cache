@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OsViItLaq1dlFX6Poo5pDsCcVWJa9baHABiBDBTeyZT/oDUF1IrB609TMtLlt3BZYmfUe4EeMDNW+QEK/cNzrw==",
+  "dgSpecHash": "4PMw2FBDND/HX04kXAs2W2g5wMbGxFLNB/2LQ9O7PdbmWPdg4TWhl4WnUrtrPJ6IjBMNzrQwtcLLYA1wIVP5Gg==",
   "success": true,
-  "projectFilePath": "/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/SequenceLang.csproj",
+  "projectFilePath": "/Users/pirux/Desktop/SequenceLanguage/ITEJA_CustomLanguage/seqc.csproj",
   "expectedPackageFiles": [
     "/Users/pirux/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
     "/Users/pirux/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.24/microsoft.netcore.app.host.osx-x64.3.1.24.nupkg.sha512",
