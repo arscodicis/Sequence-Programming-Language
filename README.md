@@ -1,5 +1,6 @@
 # The Sequence Programming Language
-This is a programming language developed mostly for fun, as well as to teach basic text-based programming. It uses a mostly familiar syntax to those who have programmed in any other programming language.
+
+This is a programming language developed mostly for fun, as well as to teach basic text-based programming. It uses a mostly familiar syntax to those who have programmed in any other programming language. It is a modified version of CustomProgrammingLanguage.
 
 # Getting Set up
 Right now, Sequence is only avaliable on macOS in this repo, but Windows support is coming. You can just build the .sln on Windows, and it will generate a useable executable.
