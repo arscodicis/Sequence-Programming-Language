@@ -20,90 +20,108 @@ namespace ITEJA_CustomLanguage
 
             for (int i = 0; i < args.Length; i++)
             {
-                //Console.WriteLine(args[i]);
-                pathToFile = args[i];
-                //Console.WriteLine("Path to file: " + pathToFile);
-                
 
-                //File.Delete(pathToFile + ".preprocess");
-                File.WriteAllText(pathToFile + ".preprocess", "");
-                //Console.WriteLine("Path to file: (preprocess) " + pathToFile + ".preprocess");
-
-                IEnumerable<string> lines = File.ReadLines(pathToFile);
-
-                if (pathToFile.EndsWith(".seq") || pathToFile.EndsWith(".vpp"))
+                if(args[i] == "--version")
                 {
+                    Console.WriteLine("Sequence v1.3");
+                } else
+                {
+                    //Console.WriteLine(args[i]);
+                    pathToFile = args[i];
+                    //Console.WriteLine("Path to file: " + pathToFile);
 
-                    
-                    //Console.WriteLine(String.Join(Environment.NewLine, lines)
 
-                    foreach (var line in lines)
+                    //File.Delete(pathToFile + ".preprocess");
+                    File.WriteAllText(pathToFile + ".preprocess", "");
+                    File.Delete(pathToFile + ".bin");
+                    //Console.WriteLine("Path to file: (preprocess) " + pathToFile + ".preprocess");
+
+                    IEnumerable<string> lines = File.ReadLines(pathToFile);
+
+                    if (pathToFile.EndsWith(".seq") || pathToFile.EndsWith(".vpp"))
                     {
-                        //Console.WriteLine(line);
 
-                        //Console.WriteLine(line);
 
-                        if (line.Contains("#!") == true)
+                        //Console.WriteLine(String.Join(Environment.NewLine, lines)
+
+                        foreach (var line in lines)
                         {
-                            
-                        }
-                        else
-                        {
+                            //Console.WriteLine(line);
 
                             //Console.WriteLine(line);
-                            File.AppendAllText(pathToFile + ".preprocess", line + "\n");
-                            
+
+                            if (line.Contains("#!") == true)
+                            {
+
+                            }
+                            else
+                            {
+
+                                //Console.WriteLine(line);
+                                File.AppendAllText(pathToFile + ".preprocess", line + "\n");
+
+                            }
+
                         }
 
+                        //IEnumerable<string> lines = File.ReadLines(pathToFile + ".preproccess");
+
+                        //Console.WriteLine(pathToFile + ".preprocess");
+
+                        Thread.Sleep(2000);
+
+                        string sourceCode = File.ReadAllText(pathToFile + ".preprocess"); // change files
+                                                                                          //Console.WriteLine("Source code: " + sourceCode);
+
+
+
+                        sourceCode = sourceCode.Replace("\r\n", string.Empty).Replace("\t", string.Empty);
+
+                        //Console.WriteLine(sourceCode);
+
+                        ILexerCreator lexer = new LexerCreator(sourceCode);
+
+                        //PrintLexems(lexer);
+                        //PrintTokens(lexer);
+
+                        try
+                        {
+                            string encryptedstring = StringCipher.Encrypt(sourceCode, "BIN");
+
+                            File.WriteAllText(pathToFile.Replace(".seq", "") + ".bin", encryptedstring);
+                        } catch(Exception ex)
+                        {
+
+                        }
+
+                        
+
+                        try
+                        {
+                            SyntaxTreeCreator ast = new SyntaxTreeCreator(lexer.GetFoundTokens());
+
+                            MainClass.Run();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("An internal error occured. Please check your code for errors.");
+                        }
+
+
+                        File.Delete(pathToFile + ".preprocess");
+                        Console.Write("\n\nPress any key to continue...");
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect file extension.");
+
                     }
 
-                    //IEnumerable<string> lines = File.ReadLines(pathToFile + ".preproccess");
 
-                    //Console.WriteLine(pathToFile + ".preprocess");
-
-                    Thread.Sleep(2000);
-
-                    string sourceCode = File.ReadAllText(pathToFile + ".preprocess"); // change files
-                    //Console.WriteLine("Source code: " + sourceCode);
-
-                   
-
-                    sourceCode = sourceCode.Replace("\r\n", string.Empty).Replace("\t", string.Empty);
-
-                    //Console.WriteLine(sourceCode);
-
-                    ILexerCreator lexer = new LexerCreator(sourceCode);
-
-                    //PrintLexems(lexer);
-                    //PrintTokens(lexer);
-
-                    string encryptedstring = StringCipher.Encrypt(sourceCode, "BIN");
-
-                    File.WriteAllText(pathToFile.Replace(".seq", "") + ".bin", encryptedstring);
-
-                    try
-                    {
-                        SyntaxTreeCreator ast = new SyntaxTreeCreator(lexer.GetFoundTokens());
-
-                        MainClass.Run();
-                    } catch(Exception ex)
-                    {
-                        Console.WriteLine("An internal error occured. Please check your code for errors.");
-                    }
-                    
-
-                    File.Delete(pathToFile + ".preprocess");
-                    Console.Write("\n\nPress any key to continue...");
-                    Console.ReadKey();
                 }
-                else
-                {
-                    Console.WriteLine("Incorrect file extension.");
-                    
-                }
-
-
             }
+                
         }
         /// <summary>
         /// Prints Lexems to the console.
