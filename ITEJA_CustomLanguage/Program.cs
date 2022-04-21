@@ -93,7 +93,7 @@ namespace ITEJA_CustomLanguage
                     
 
                     File.Delete(pathToFile + ".preprocess");
-                    Console.Write("Press any key to continue...");
+                    Console.Write("\n\nPress any key to continue...");
                     Console.ReadKey();
                 }
                 else

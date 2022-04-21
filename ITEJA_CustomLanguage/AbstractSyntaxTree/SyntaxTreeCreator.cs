@@ -80,6 +80,10 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree
                 {
                     InputSyntax();
                 }
+                else if (newToken.Type == TokenType.Print)
+                {
+                    CreatePrintNoNewLineStatement();
+                }
             }
         }
 
@@ -377,6 +381,31 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree
         {
             CheckAndRemoveLeftParenthesis();
             PrintLnStatement printStatement = new PrintLnStatement
+            {
+                Parent = parentBodyStatements.Peek()
+            };
+            if (tokenStack.Peek().Type == TokenType.StringCharacters)
+            {
+                printStatement.Variable = CreateStringVariable();
+            }
+            else if (tokenStack.Peek().Type == TokenType.NumberCharacters)
+            {
+                printStatement.Variable = CreateIntegerVariable();
+            }
+            else if (tokenStack.Peek().Type == TokenType.Identifier)
+            {
+                printStatement.Variable = MainClass.FindIdentifier(parentBodyStatements.Peek(), tokenStack.Pop().Value);
+            }
+            parentBodyStatements.Peek().Statements.Add(printStatement);
+        }
+
+        /// <summary>
+        /// Creates a print line statement.
+        /// </summary>
+        private void CreatePrintNoNewLineStatement()
+        {
+            CheckAndRemoveLeftParenthesis();
+            PrintStatement printStatement = new PrintStatement
             {
                 Parent = parentBodyStatements.Peek()
             };

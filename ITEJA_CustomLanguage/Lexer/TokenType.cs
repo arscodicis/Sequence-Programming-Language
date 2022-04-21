@@ -31,6 +31,7 @@
         HigherThan,
         ExclMark,
         TestSyntax,
-        Input
+        Input,
+        Print
     }
 }
