@@ -62,7 +62,7 @@ if(counter + 2 < 4)
 	}
 ```
 
-`input`: Obtains input from the console.
+`input`: Obtains input from the console. Cannot be used to get integer input.
 ```
 program()
 {
