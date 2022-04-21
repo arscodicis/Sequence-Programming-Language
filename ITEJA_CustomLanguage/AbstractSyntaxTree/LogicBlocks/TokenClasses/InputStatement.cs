@@ -25,7 +25,7 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
         { 
             string s = Console.ReadLine();
             StringBuilder sb = new StringBuilder();
-            sb.Append(s);
+            _ = sb.Append(s);
             Variable.Value = sb;
             //Console.WriteLine("Variable value: " + Variable.Value);
 

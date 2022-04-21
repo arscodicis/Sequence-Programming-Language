@@ -23,7 +23,7 @@ namespace ITEJA_CustomLanguage
 
                 if(args[i] == "--version")
                 {
-                    Console.WriteLine("Sequence v1.7");
+                    Console.WriteLine("Sequence v1.8");
                 } else if(args[i] == "--path")
                 {
                     Console.WriteLine("");
@@ -109,7 +109,7 @@ namespace ITEJA_CustomLanguage
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine("An internal error occured. Please check your code for errors.");
+                            Console.WriteLine(ex);
                         }
 
 
