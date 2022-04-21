@@ -29,6 +29,7 @@
         StringCharacters,
         LessThan,
         HigherThan,
-        ExclMark
+        ExclMark,
+        TestSyntax
     }
 }

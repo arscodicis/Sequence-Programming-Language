@@ -72,7 +72,22 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree
                 {
                     CreateForCycleStatement();
                 }
+                else if (newToken.Type == TokenType.TestSyntax)
+                {
+                    TestSyntax();
+                }
             }
+        }
+
+        /// <summary>
+        /// Creates a print line statement.
+        /// </summary>
+        private void TestSyntax()
+        {
+            TestSyntaxStatement testSyntaxStatement = new TestSyntaxStatement();
+            //CheckAndRemoveLeftParenthesis();
+            parentBodyStatements.Peek().Statements.Add(testSyntaxStatement);
+            Console.WriteLine("TestSyntax!");
         }
         /// <summary>
         /// Creates ForCycle Statement

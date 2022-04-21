@@ -76,11 +76,19 @@ namespace ITEJA_CustomLanguage
                     //PrintLexems(lexer);
                     //PrintTokens(lexer);
 
-                    SyntaxTreeCreator ast = new SyntaxTreeCreator(lexer.GetFoundTokens());
+                    try
+                    {
+                        SyntaxTreeCreator ast = new SyntaxTreeCreator(lexer.GetFoundTokens());
 
-                    MainClass.Run();
+                        MainClass.Run();
+                    } catch(Exception ex)
+                    {
+                        Console.WriteLine("An internal error occured. Please check your code for errors.");
+                    }
+                    
 
                     File.Delete(pathToFile + ".preprocess");
+                    Console.ReadLine();
                 }
                 else
                 {

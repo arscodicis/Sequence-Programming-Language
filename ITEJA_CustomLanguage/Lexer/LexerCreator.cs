@@ -22,7 +22,8 @@ namespace ITEJA_CustomLanguage.Lexer
             {"forcycle", TokenType.Forcycle},
             {"run", TokenType.Run},
             {"program", TokenType.Program},
-            {"println", TokenType.PrintLn}
+            {"println", TokenType.PrintLn},
+            {"testsyntax", TokenType.TestSyntax}
         };
         /// <summary>
         /// Dictionary with all operators and punctators 
@@ -102,6 +103,13 @@ namespace ITEJA_CustomLanguage.Lexer
                 }
             }
         }
+
+        
+        /// <summary>
+        /// Creates an integer token.
+        /// </summary>
+        /// <param name="character">Initial character</param>
+        /// 
         /// <summary>
         /// Creates a string token.
         /// </summary>
