@@ -30,7 +30,7 @@ In this case `program(){}` is like the `main()` method in many _****many****_ pr
 
 `#!`: Comment. Acts like any other comment.
 
-`print`: Prints text with no newline.
+`print`: Prints text with no newline. `print("Hello!");`
 
 `println`: Print text with newline. Can print text `println("hello");` as well as `println(myvariable);` and `println("text" + "text2"`, as well as math: `println(5 + 5 * 8 - 6);`
 
