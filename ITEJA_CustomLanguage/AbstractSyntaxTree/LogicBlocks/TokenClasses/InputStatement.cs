@@ -23,6 +23,7 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
         /// </summary>
         public void Execute()
         {
+            Console.Write("> ");
             string s = Console.ReadLine();
             StringBuilder sb = new StringBuilder();
             sb.Append(s);
