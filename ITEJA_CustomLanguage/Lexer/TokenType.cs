@@ -30,6 +30,7 @@
         LessThan,
         HigherThan,
         ExclMark,
-        TestSyntax
+        TestSyntax,
+        Input
     }
 }

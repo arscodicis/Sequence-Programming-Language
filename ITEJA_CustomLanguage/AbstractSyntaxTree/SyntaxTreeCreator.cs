@@ -76,11 +76,33 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree
                 {
                     TestSyntax();
                 }
+                else if (newToken.Type == TokenType.Input)
+                {
+                    InputSyntax();
+                }
             }
         }
 
         /// <summary>
-        /// Creates a print line statement.
+        /// Creates a InputSyntax
+        /// </summary>
+        private void InputSyntax()
+        {
+            InputStatment inputStatment = new InputStatment();
+            //CheckAndRemoveLeftParenthesis();
+            CheckAndRemoveEqualsSign();
+            if (tokenStack.Peek().Type == TokenType.Identifier)
+            {
+                inputStatment.Variable = MainClass.FindIdentifier(parentBodyStatements.Peek(), tokenStack.Pop().Value);
+            }
+           
+
+            parentBodyStatements.Peek().Statements.Add(inputStatment);
+            //Console.WriteLine("TestSyntax!");
+        }
+
+        /// <summary>
+        /// Creates a TestSyntax
         /// </summary>
         private void TestSyntax()
         {

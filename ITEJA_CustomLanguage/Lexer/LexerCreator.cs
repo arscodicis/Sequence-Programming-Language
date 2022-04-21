@@ -23,7 +23,8 @@ namespace ITEJA_CustomLanguage.Lexer
             {"run", TokenType.Run},
             {"program", TokenType.Program},
             {"println", TokenType.PrintLn},
-            {"testsyntax", TokenType.TestSyntax}
+            {"testsyntax", TokenType.TestSyntax},
+            {"input", TokenType.Input}
         };
         /// <summary>
         /// Dictionary with all operators and punctators 
