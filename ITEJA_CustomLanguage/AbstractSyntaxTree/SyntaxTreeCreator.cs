@@ -87,7 +87,7 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree
             TestSyntaxStatement testSyntaxStatement = new TestSyntaxStatement();
             //CheckAndRemoveLeftParenthesis();
             parentBodyStatements.Peek().Statements.Add(testSyntaxStatement);
-            Console.WriteLine("TestSyntax!");
+            //Console.WriteLine("TestSyntax!");
         }
         /// <summary>
         /// Creates ForCycle Statement

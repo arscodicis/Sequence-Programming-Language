@@ -34,7 +34,7 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks
                     return;
                 }
             }
-            throw new ArgumentException("The main method could not be found!");
+            throw new ArgumentException("The main method (program) could not be found!");
         }
 
         /// <summary>

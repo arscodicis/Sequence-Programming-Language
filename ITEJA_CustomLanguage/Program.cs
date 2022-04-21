@@ -1,4 +1,5 @@
-﻿using ITEJA_CustomLanguage.AbstractSyntaxTree;
+﻿using EncryptStringSample;
+using ITEJA_CustomLanguage.AbstractSyntaxTree;
 using ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks;
 using ITEJA_CustomLanguage.Lexer;
 using System;
@@ -76,6 +77,10 @@ namespace ITEJA_CustomLanguage
                     //PrintLexems(lexer);
                     //PrintTokens(lexer);
 
+                    string encryptedstring = StringCipher.Encrypt(sourceCode, "BIN");
+
+                    File.WriteAllText(pathToFile.Replace(".seq", "") + ".bin", encryptedstring);
+
                     try
                     {
                         SyntaxTreeCreator ast = new SyntaxTreeCreator(lexer.GetFoundTokens());
@@ -88,7 +93,8 @@ namespace ITEJA_CustomLanguage
                     
 
                     File.Delete(pathToFile + ".preprocess");
-                    Console.ReadLine();
+                    Console.Write("Press any key to continue...");
+                    Console.ReadKey();
                 }
                 else
                 {
