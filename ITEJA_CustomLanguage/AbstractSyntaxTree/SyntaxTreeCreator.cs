@@ -84,7 +84,28 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree
                 {
                     CreatePrintNoNewLineStatement();
                 }
+                else if (newToken.Type == TokenType.Randint)
+                {
+                    RandInt();
+                }
             }
+        }
+
+        private void RandInt()
+        {
+            RandintStatment randintStatment = new RandintStatment();
+            //CheckAndRemoveLeftParenthesis();
+            CheckAndRemoveEqualsSign();
+            //CheckAndRemoveLeftParenthesis();
+            if (tokenStack.Peek().Type == TokenType.Identifier)
+            {
+                randintStatment.Variable = MainClass.FindIdentifier(parentBodyStatements.Peek(), tokenStack.Pop().Value);
+                
+            }
+
+
+            parentBodyStatements.Peek().Statements.Add(randintStatment);
+            //Console.WriteLine("TestSyntax!");
         }
 
         /// <summary>

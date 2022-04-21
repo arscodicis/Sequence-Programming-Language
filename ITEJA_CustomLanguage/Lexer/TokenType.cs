@@ -32,6 +32,7 @@
         ExclMark,
         TestSyntax,
         Input,
-        Print
+        Print,
+        Randint
     }
 }

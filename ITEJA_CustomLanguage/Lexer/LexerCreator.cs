@@ -25,7 +25,8 @@ namespace ITEJA_CustomLanguage.Lexer
             {"println", TokenType.PrintLn},
             {"testsyntax", TokenType.TestSyntax},
             {"input", TokenType.Input},
-            {"print", TokenType.Print}
+            {"print", TokenType.Print},
+            {"randint", TokenType.Randint}
         };
         /// <summary>
         /// Dictionary with all operators and punctators 

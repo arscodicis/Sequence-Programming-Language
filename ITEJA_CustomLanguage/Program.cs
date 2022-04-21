@@ -23,8 +23,13 @@ namespace ITEJA_CustomLanguage
 
                 if(args[i] == "--version")
                 {
-                    Console.WriteLine("Sequence v1.3");
-                } else
+                    Console.WriteLine("Sequence v1.7");
+                } else if(args[i] == "--path")
+                {
+                    Console.WriteLine("");
+                }
+
+                else
                 {
                     //Console.WriteLine(args[i]);
                     pathToFile = args[i];
