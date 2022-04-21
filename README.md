@@ -77,6 +77,18 @@ program()
 }
 ```
 
+`randint`: Creates a random integer.
+Syntax:
+```
+program()
+{
+
+	integer randomNumber = 4 #! The parser takes the value as the highest number to create to.
+	randint = randomNumber;
+	println(randomNumber);
+}
+```
+
 #### Variables
 
 `integer`: Works like this: `integer myInt = 0;` Can be modified. E.G.
