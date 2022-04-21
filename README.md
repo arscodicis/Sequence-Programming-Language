@@ -30,7 +30,9 @@ In this case `program(){}` is like the `main()` method in many _****many****_ pr
 
 `#!`: Comment. Acts like any other comment.
 
-`println`: Can print text `println("hello");` as well as `println(myvariable);` and `println("text" + "text2"`, as well as math: `println(5 + 5 * 8 - 6);`
+`print`: Prints text with no newline. `print("Hello!");`
+
+`println`: Print text with newline. Can print text `println("hello");` as well as `println(myvariable);` and `println("text" + "text2"`, as well as math: `println(5 + 5 * 8 - 6);`
 
 `forcycle`: Operates as your typical `foreach` statement.
 ```
@@ -58,6 +60,21 @@ if(counter + 2 < 4)
 	{
 		println("Ouch, condition is false");
 	}
+```
+
+`input`: Obtains input from the console.
+```
+program()
+{
+	println("Hello world!");	
+	#! Comment!
+	string myName = "";
+	println("Enter your name: ");
+	input = myName;
+	print("Welecome, ");
+	print(myName);
+	print(".");
+}
 ```
 
 #### Variables
