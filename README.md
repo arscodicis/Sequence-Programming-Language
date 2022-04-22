@@ -89,14 +89,14 @@ program()
 }
 ```
 
-`audio.play`: Plays specified audio path.
+`play`: Plays specified audio path.
 Syntax:
 ```
 program()
 {
 
 	string path = "/Users/user/Music/EpicTheme.mp3";
-	audio.play = path;
+	play = path;
 	
 }
 
