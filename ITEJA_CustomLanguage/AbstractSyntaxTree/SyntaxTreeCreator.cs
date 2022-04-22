@@ -100,7 +100,7 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree
             AudioStatment audioStatment = new AudioStatment();
             //CheckAndRemoveLeftParenthesis();
             CheckAndRemoveEqualsSign();
-            Console.WriteLine("Audio");
+            //Console.WriteLine("Audio");
             //CheckAndRemoveLeftParenthesis();
             if (tokenStack.Peek().Type == TokenType.Identifier)
             {
