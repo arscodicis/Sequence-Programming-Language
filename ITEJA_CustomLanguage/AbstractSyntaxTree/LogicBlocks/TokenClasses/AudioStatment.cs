@@ -47,7 +47,20 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
 
             } catch (Exception ex)
             {
-                //Console.WriteLine("Error playing sound file. Make sure path is right!");
+                try
+                {
+                    using (var waveOut = new WaveOutEvent())
+                    using (var wavReader = new WaveFileReader(Convert.ToString(Variable.Value)))
+                    {
+                        waveOut.Init(wavReader);
+                        waveOut.Play();
+                    }
+
+                }
+                catch (Exception ex2)
+                {
+                    Console.WriteLine("Error playing sound file. Make sure path is right!");
+                }
             }
         }
 
