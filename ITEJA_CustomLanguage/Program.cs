@@ -26,7 +26,7 @@ namespace ITEJA_CustomLanguage
 
                 if(args[i] == "--version")
                 {
-                    Console.WriteLine("Sequence v1.9");
+                    Console.WriteLine("Sequence v2.1");
                 } else if(args[i] == "--path")
                 {
                     Console.WriteLine("");

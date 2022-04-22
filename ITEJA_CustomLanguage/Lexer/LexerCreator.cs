@@ -27,7 +27,8 @@ namespace ITEJA_CustomLanguage.Lexer
             {"input", TokenType.Input},
             {"print", TokenType.Print},
             {"randint", TokenType.Randint},
-            {"play", TokenType.Audio}
+            {"play", TokenType.Audio},
+            {"sleep", TokenType.Sleep}
         };
         /// <summary>
         /// Dictionary with all operators and punctators 

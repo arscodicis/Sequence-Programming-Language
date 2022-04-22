@@ -34,6 +34,7 @@
         Input,
         Print,
         Randint,
-        Audio
+        Audio,
+        Sleep
     }
 }

@@ -92,7 +92,29 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree
                 {
                     Audio();
                 }
+                else if (newToken.Type == TokenType.Sleep)
+                {
+                    Sleep();
+                }
             }
+        }
+
+        private void Sleep()
+        {
+            SleepStatment sleepStatment = new SleepStatment();
+            //CheckAndRemoveLeftParenthesis();
+            CheckAndRemoveEqualsSign();
+            //Console.WriteLine("Audio");
+            //CheckAndRemoveLeftParenthesis();
+            if (tokenStack.Peek().Type == TokenType.Identifier)
+            {
+                sleepStatment.Variable = MainClass.FindIdentifier(parentBodyStatements.Peek(), tokenStack.Pop().Value);
+
+            }
+
+
+            parentBodyStatements.Peek().Statements.Add(sleepStatment);
+            //Console.WriteLine("TestSyntax!");
         }
 
         private void Audio()
