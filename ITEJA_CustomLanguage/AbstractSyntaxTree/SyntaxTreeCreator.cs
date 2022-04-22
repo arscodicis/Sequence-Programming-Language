@@ -96,7 +96,29 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree
                 {
                     Sleep();
                 }
+                else if (newToken.Type == TokenType.ReadFile)
+                {
+                    ReadFile();
+                }
             }
+        }
+
+        private void ReadFile()
+        {
+            ReadFileStatment readFileStatment = new ReadFileStatment();
+            //CheckAndRemoveLeftParenthesis();
+            CheckAndRemoveEqualsSign();
+            //Console.WriteLine("Audio");
+            //CheckAndRemoveLeftParenthesis();
+            if (tokenStack.Peek().Type == TokenType.Identifier)
+            {
+                readFileStatment.Variable = MainClass.FindIdentifier(parentBodyStatements.Peek(), tokenStack.Pop().Value);
+
+            }
+
+
+            parentBodyStatements.Peek().Statements.Add(readFileStatment);
+            //Console.WriteLine("TestSyntax!");
         }
 
         private void Sleep()

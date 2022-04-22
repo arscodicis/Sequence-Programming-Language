@@ -31,6 +31,26 @@ namespace ITEJA_CustomLanguage
                 {
                     Console.WriteLine("");
                 }
+                else if(args[i] == "--about")
+                {
+                    Console.WriteLine(@"
+
+                :~!!~^.                
+              .:^57^::::.               
+              :J!J.                     
+              .7YJ7^.                   
+               .^!?JJ?7^.               
+                   .:!JJ7.              
+                      ?77:              
+                :::::!5~:.              
+                .^~!!!^         
+ 
+");
+                    Console.WriteLine("Sequence: a particular order in which related events, movements, or things follow each other");
+                    Console.WriteLine("Sequence © 2022 PIRUX, LLC");
+                    Console.WriteLine("The vision of Sequence is that programming would be simplified to mere sequence; easy to read, easy to write.");
+
+                }
 
                 else
                 {

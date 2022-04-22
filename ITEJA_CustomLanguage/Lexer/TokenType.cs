@@ -35,6 +35,7 @@
         Print,
         Randint,
         Audio,
-        Sleep
+        Sleep,
+        ReadFile
     }
 }
