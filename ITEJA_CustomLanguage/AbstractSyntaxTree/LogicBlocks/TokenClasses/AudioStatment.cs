@@ -16,7 +16,7 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
         /// Variable that will be printed to the console
         /// </summary>
         public IVariable Variable { get; set; }
-        
+
         /// <summary>
         /// Bodystatement parent of this statement.
         /// </summary>
@@ -25,7 +25,7 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
         /// Executes a println
         /// </summary>
         ///
-        
+
 
         public void Execute()
         {
@@ -34,7 +34,7 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
             {
                 Process proc = new System.Diagnostics.Process();
                 proc.StartInfo.FileName = "/bin/bash";
-                proc.StartInfo.Arguments = "-c \" " + "afplay " + Convert.ToString(Variable.Value) + " \""; 
+                proc.StartInfo.Arguments = "-c \" " + "afplay " + Convert.ToString(Variable.Value) + " \"";
                 proc.StartInfo.UseShellExecute = false;
                 proc.StartInfo.RedirectStandardOutput = true;
                 proc.Start();
@@ -45,28 +45,33 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
                 }
 
 
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 try
                 {
-                    using (var waveOut = new WaveOutEvent())
-                    using (var wavReader = new WaveFileReader(Convert.ToString(Variable.Value)))
+                    using (var audioFile = new AudioFileReader(Convert.ToString(Variable.Value)))
+                    using (var outputDevice = new WaveOutEvent())
                     {
-                        waveOut.Init(wavReader);
-                        waveOut.Play();
+                        outputDevice.Init(audioFile);
+                        outputDevice.Play();
+                        while (outputDevice.PlaybackState == PlaybackState.Playing)
+                        {
+                            Thread.Sleep(1000);
+                        }
                     }
 
                 }
                 catch (Exception ex2)
                 {
-                    Console.WriteLine("Error playing sound file. Make sure path is right!");
+                    Console.WriteLine();
                 }
             }
         }
 
     }
 
-    
 
-    
+
+
 }
