@@ -89,6 +89,20 @@ program()
 }
 ```
 
+`play`: Plays specified audio path.
+Syntax:
+```
+program()
+{
+
+	string path = "/Users/user/Music/EpicTheme.mp3";
+	play = path;
+	
+}
+
+```
+
+
 #### Variables
 
 `integer`: Works like this: `integer myInt = 0;` Can be modified. E.G.
