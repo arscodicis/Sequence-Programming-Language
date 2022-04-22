@@ -6,6 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="System.Windows.Extensions" />
+    <None Remove="NAudio" />
+    <None Remove="Vanara.PInvoke.Multimedia" />
+    <None Remove="NAudio.Lame" />
+    <None Remove="NAudio.Core" />
+    <None Remove="NAudio.Wasapi" />
+    <None Remove="NAudio.WinMM" />
+    <None Remove="NAudio.Midi" />
+    <None Remove="NAudio.Asio" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="code.vpp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -26,4 +37,13 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Windows.Extensions" Version="6.0.0" />
+    <PackageReference Include="NAudio" Version="2.0.1" />
+    <PackageReference Include="Vanara.PInvoke.Multimedia" Version="3.4.0" />
+    <PackageReference Include="NAudio.Lame" Version="2.0.1" />
+    <PackageReference Include="NAudio.Core" Version="2.0.0" />
+    <PackageReference Include="NAudio.Midi" Version="2.0.1" />
+    <PackageReference Include="NAudio.Asio" Version="2.0.0" />
+  </ItemGroup>
 </Project>

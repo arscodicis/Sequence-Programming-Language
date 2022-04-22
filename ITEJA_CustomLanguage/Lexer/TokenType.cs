@@ -33,6 +33,7 @@
         TestSyntax,
         Input,
         Print,
-        Randint
+        Randint,
+        Audio
     }
 }

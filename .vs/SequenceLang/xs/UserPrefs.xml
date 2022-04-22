@@ -1,16 +1,50 @@
 ﻿<Properties StartupConfiguration="{297AD100-7BBB-4FDD-9AFE-61D4442367A4}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ITEJA_CustomLanguage/AbstractSyntaxTree/Condition.cs">
+    <Files>
+      <File FileName="ITEJA_CustomLanguage/Lexer/TokenType.cs" Line="36" Column="16" IsPinned="True" />
+      <File FileName="ITEJA_CustomLanguage/Program.cs" Line="26" Column="54" IsPinned="True" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/SyntaxTreeCreator.cs" Line="99" Column="15" />
+      <File FileName="ITEJA_CustomLanguage/Lexer/LexerCreator.cs" Line="29" Column="42" />
+      <File FileName="ITEJA_CustomLanguage/Lexer/ILexer.cs" Line="19" Column="28" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/PrintLnStatement.cs" Line="1" Column="1" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/InputStatement.cs" Line="28" Column="30" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/PrintStatement.cs" Line="25" Column="26" />
+      <File FileName="ITEJA_CustomLanguage/EncryptStringSample.cs" Line="1" Column="1" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/RedefinitionStatement.cs" Line="1" Column="1" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/RandintStatement.cs" Line="27" Column="15" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/Variables/IIntegerVariable.cs" Line="1" Column="1" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/Variables/IVariable.cs" Line="1" Column="1" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/RunStatement.cs" Line="1" Column="1" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/IStatement.cs" Line="1" Column="1" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/IRunStatement.cs" Line="1" Column="1" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/IRedefinitionStatement.cs" Line="1" Column="1" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/Variables/IntegerVariable.cs" Line="1" Column="1" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/BodyStatements/IConditionIfStatement.cs" Line="1" Column="1" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/LogicBlocks/TokenClasses/BodyStatements/Classes/ConditionIfStatement.cs" Line="1" Column="1" />
+      <File FileName="ITEJA_CustomLanguage/AbstractSyntaxTree/Condition.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SequenceLang" expanded="True" selected="True">
-            <Node name="SequenceLang" expanded="True" />
+          <Node name="SequenceLang" expanded="True">
+            <Node name="seqc" expanded="True">
+              <Node name="AbstractSyntaxTree" expanded="True">
+                <Node name="LogicBlocks" expanded="True">
+                  <Node name="TokenClasses" expanded="True">
+                    <Node name="BodyStatements" expanded="True">
+                      <Node name="Classes" expanded="True" />
+                    </Node>
+                    <Node name="Variables" expanded="True" />
+                  </Node>
+                </Node>
+                <Node name="Condition.cs" selected="True" />
+              </Node>
+              <Node name="Lexer" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

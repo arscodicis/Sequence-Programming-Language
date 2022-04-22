@@ -88,7 +88,29 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree
                 {
                     RandInt();
                 }
+                else if (newToken.Type == TokenType.Audio)
+                {
+                    Audio();
+                }
             }
+        }
+
+        private void Audio()
+        {
+            AudioStatment audioStatment = new AudioStatment();
+            //CheckAndRemoveLeftParenthesis();
+            CheckAndRemoveEqualsSign();
+            Console.WriteLine("Audio");
+            //CheckAndRemoveLeftParenthesis();
+            if (tokenStack.Peek().Type == TokenType.Identifier)
+            {
+                audioStatment.Variable = MainClass.FindIdentifier(parentBodyStatements.Peek(), tokenStack.Pop().Value);
+
+            }
+
+
+            parentBodyStatements.Peek().Statements.Add(audioStatment);
+            //Console.WriteLine("TestSyntax!");
         }
 
         private void RandInt()

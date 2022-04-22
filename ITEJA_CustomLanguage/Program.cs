@@ -2,8 +2,10 @@
 using ITEJA_CustomLanguage.AbstractSyntaxTree;
 using ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks;
 using ITEJA_CustomLanguage.Lexer;
+using NAudio.Wave;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Threading;
 
@@ -14,6 +16,7 @@ namespace ITEJA_CustomLanguage
         
         static void Main(string[] args)
         {
+
             
 
             string pathToFile = "";
@@ -23,7 +26,7 @@ namespace ITEJA_CustomLanguage
 
                 if(args[i] == "--version")
                 {
-                    Console.WriteLine("Sequence v1.8");
+                    Console.WriteLine("Sequence v1.9");
                 } else if(args[i] == "--path")
                 {
                     Console.WriteLine("");
@@ -31,6 +34,9 @@ namespace ITEJA_CustomLanguage
 
                 else
                 {
+
+                    
+
                     //Console.WriteLine(args[i]);
                     pathToFile = args[i];
                     //Console.WriteLine("Path to file: " + pathToFile);
