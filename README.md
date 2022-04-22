@@ -102,6 +102,17 @@ program()
 
 ```
 
+`sleep`: Sleeps the thread for the recieved seconds.
+Syntax:
+``
+program()
+{
+
+	integer timeToSleep = 5000; 
+	#! 5000 ms = 5 seconds
+	sleep = timeToSleep();
+	
+
 
 #### Variables
 
