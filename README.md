@@ -1,3 +1,6 @@
+![23-02](https://user-images.githubusercontent.com/100168416/164767505-a0d0799f-5354-437b-8e60-1366a0bf475e.jpg)
+
+
 # The Sequence Programming Language
 
 This is a programming language developed mostly for fun, as well as to teach basic text-based programming. It uses a mostly familiar syntax to those who have programmed in any other programming language. It is a modified version of CustomProgrammingLanguage.
@@ -172,3 +175,9 @@ And then call them like:
 `run printNames("Name1", "Name2", "Name3", "Name4", "Name5");`
 
 This line can be run anywhere, even inside other functions.
+
+# Compiler Arguments
+
+`seqc --version`: Returns the current version.
+
+`seqc --about`: Returns about Sequence.
