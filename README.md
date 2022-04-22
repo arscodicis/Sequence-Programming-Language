@@ -104,7 +104,7 @@ program()
 
 `sleep`: Sleeps the thread for the recieved seconds.
 Syntax:
-``
+```
 program()
 {
 
@@ -112,8 +112,8 @@ program()
 	#! 5000 ms = 5 seconds
 	sleep = timeToSleep();
 	
-
-
+}
+```
 #### Variables
 
 `integer`: Works like this: `integer myInt = 0;` Can be modified. E.G.
