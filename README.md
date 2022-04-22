@@ -176,7 +176,7 @@ And then call them like:
 
 This line can be run anywhere, even inside other functions.
 
-#### Compiler Arguments
+# Compiler Arguments
 
 `seqc --version`: Returns the current version.
 `seqc --about`: Returns about Sequence.
