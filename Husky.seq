@@ -1,0 +1,87 @@
+#! A program to descibe a husky.
+
+#! Create a random number between 0 - 3 (4 options)
+#! integer randinteger = 0;
+#! randint = randinteger;
+
+
+describeHusky(string huskyName) {
+
+		#! Variables
+		string furColor = "black/white";
+		string eyeColor = "blue";
+		string huskySize = "medium";
+		integer age = 2;
+		#!string name = huskyName;
+		
+		#! Logic
+		print("Husky name: ");
+		print(huskyName);
+		println("");
+		print("Husky fur color: ");
+		print(furColor);
+		println("");
+		print("Husky eye color: ");
+		print(eyeColor);
+		println("");
+		print("Husky age: ");
+		print(age);
+		println("");
+		print("Husky size: ");
+		print(huskySize);
+		println("");
+		println("The husky speaks!");
+		run huskySpeak();
+		
+		integer randomAction = 3;
+		randint = randomAction;
+		
+		if(randomAction == 1){
+			run huskyBark();
+		} else {
+			if(randomAction == 2){
+				run huskyWhine();
+			} else {
+				if(randomAction == 3){
+					run huskyLick();
+				} else {
+					run huskySleep();
+				}
+			}
+		}
+
+}
+
+#! Make the digital husky speak
+
+huskySpeak() {
+		println("Owrowrowrowrow!");
+
+}
+
+huskyBark() {
+		println("Woof!");
+
+}
+
+huskyWhine() {
+		println("Whineeeeee...");
+}
+
+huskyLick(){
+		println("Wuv you wuv you wuv you!");
+}
+
+huskySleep(){
+		println("ZZZZZZZZZZZZZZZZ");
+}
+
+
+#! Main class:
+
+program() {
+		print("Enter your husky's name: ");
+		string myHuskyName = "";
+		input = myHuskyName;
+		run describeHusky(myHuskyName);
+}
