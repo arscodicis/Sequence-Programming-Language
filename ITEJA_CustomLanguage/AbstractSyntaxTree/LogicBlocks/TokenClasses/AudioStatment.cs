@@ -29,7 +29,7 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
 
         public void Execute()
         {
-            Console.WriteLine(Variable.Value);
+            //Console.WriteLine(Variable.Value);
             try
             {
                 Process proc = new System.Diagnostics.Process();
