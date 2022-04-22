@@ -175,3 +175,8 @@ And then call them like:
 `run printNames("Name1", "Name2", "Name3", "Name4", "Name5");`
 
 This line can be run anywhere, even inside other functions.
+
+#### Compiler Arguments
+
+`seqc --version`: Returns the current version.
+`seqc --about`: Returns about Sequence.
