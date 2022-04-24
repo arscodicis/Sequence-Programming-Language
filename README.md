@@ -117,6 +117,22 @@ program()
 	
 }
 ```
+#### File operations
+
+`readfile`: Reads a file to a string.
+
+```
+program(){
+
+print("Enter file path to read: ");
+string path = "";
+input = path;
+readfile = path;
+println(path);
+
+}
+```
+
 #### Variables
 
 `integer`: Works like this: `integer myInt = 0;` Can be modified. E.G.
