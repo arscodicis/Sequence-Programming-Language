@@ -12,6 +12,9 @@ describeHusky(string huskyName) {
 		integer age = 0;
 		print("Enter husky age: ");
 		input = age;
+		println("");
+		println("Results ------------------------------------------------------->");
+		println("");
 		
 		globalHuskyAge = huskyName;
 		
@@ -31,10 +34,8 @@ describeHusky(string huskyName) {
 		print("Husky size: ");
 		print(huskySize);
 		println("");
-		println("The husky speaks!");
-		run huskySpeak();
-		
-		integer randomAction = 3;
+				
+		integer randomAction = 4;
 		randint = randomAction;
 		
 		if (randomAction == 1){
@@ -46,10 +47,17 @@ describeHusky(string huskyName) {
 				if(randomAction == 3){
 					run huskyLick();
 				} else {
-					run huskySleep();
+					if(randomAction == 4){
+						#!println("The husky speaks!");
+						run huskySpeak();
+
+					}
+					
 				}
 			}
 		}
+		
+		run huskySleep();
 		
 		run huskyCalculateToDogYears(age);
 		
@@ -77,7 +85,7 @@ huskyLick(){
 }
 
 huskySleep(){
-		println("ZZZZZZZZZZZZZZZZ");
+		println("ZZZZZZZZZZZZZZZZ...");
 }
 
 huskyCalculateToDogYears(integer age){
