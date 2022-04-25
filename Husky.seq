@@ -1,18 +1,19 @@
 #! A program to descibe a husky.
 
-#! Create a random number between 0 - 3 (4 options)
-#! integer randinteger = 0;
-#! randint = randinteger;
+string globalHuskyAge = "";
 
 
 describeHusky(string huskyName) {
 
 		#! Variables
-		string furColor = "black/white";
+		string furColor = "black/white"; #
 		string eyeColor = "blue";
 		string huskySize = "medium";
-		integer age = 2;
-		#!string name = huskyName;
+		integer age = 0;
+		print("Enter husky age: ");
+		input = age;
+		
+		globalHuskyAge = huskyName;
 		
 		#! Logic
 		print("Husky name: ");
@@ -36,7 +37,7 @@ describeHusky(string huskyName) {
 		integer randomAction = 3;
 		randint = randomAction;
 		
-		if(randomAction == 1){
+		if (randomAction == 1){
 			run huskyBark();
 		} else {
 			if(randomAction == 2){
@@ -49,6 +50,9 @@ describeHusky(string huskyName) {
 				}
 			}
 		}
+		
+		run huskyCalculateToDogYears(age);
+		
 
 }
 
@@ -76,6 +80,26 @@ huskySleep(){
 		println("ZZZZZZZZZZZZZZZZ");
 }
 
+huskyCalculateToDogYears(integer age){
+		print(globalHuskyAge);
+		print("'s");
+		print(" age (in dog years): ");
+		if(age == 1){
+			print("15 years.");
+		} else {
+			if(age == 2){
+				print("24 years.");
+			} else {
+				if(age == 3){
+					print("28 years.");
+			}	else {
+				println("Beyond mathematical capability currently.");
+			}
+			}
+		}
+		
+
+}
 
 #! Main class:
 
