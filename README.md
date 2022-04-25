@@ -24,14 +24,14 @@ Every .seq file must include a main method, as with many other programming langu
 ```
 program()
 {
-	println("Hello world!");	
-	#! Comment!
+	#! Content
+	
 }
 ```
 
 In this case `program(){}` is like the `main()` method in many _****many****_ programming languages.
 
-# Syntax
+# Syntax: The Manual
 
 #### Keywords
 
