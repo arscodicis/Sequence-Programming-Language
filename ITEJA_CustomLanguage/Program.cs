@@ -26,7 +26,7 @@ namespace ITEJA_CustomLanguage
 
                 if(args[i] == "--version")
                 {
-                    Console.WriteLine("Sequence v2.1");
+                    Console.WriteLine("Sequence v2.3");
                 } else if(args[i] == "--path")
                 {
                     Console.WriteLine("");
@@ -146,6 +146,7 @@ namespace ITEJA_CustomLanguage
                     else
                     {
                         Console.WriteLine("Incorrect file extension.");
+                        
 
                     }
 

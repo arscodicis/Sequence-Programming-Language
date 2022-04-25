@@ -34,7 +34,7 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
             //Console.WriteLine(Variable.Value);
             try
             {
-                string s = Convert.ToString(File.ReadAllText(Convert.ToString(Variable.Value)));
+                string s = Convert.ToString(File.ReadAllLines(Convert.ToString(Variable.Value)));
                 StringBuilder sb = new StringBuilder();
                 _ = sb.Append(s);
                 Variable.Value = sb;

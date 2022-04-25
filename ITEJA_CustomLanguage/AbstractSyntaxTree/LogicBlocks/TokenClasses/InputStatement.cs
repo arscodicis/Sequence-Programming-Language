@@ -1,6 +1,7 @@
 ﻿using ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses.BodyStatements;
 using ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses.Variables;
 using System;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
@@ -27,7 +28,29 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
             StringBuilder sb = new StringBuilder();
             _ = sb.Append(s);
 
-            Variable.Value = sb;
+            try
+            {
+                   
+                if(int.TryParse(Convert.ToString(sb), out int result))
+                {
+                    StringBuilder sb2 = new StringBuilder();
+                    _ = sb2.Append(Convert.ToString(result));
+                    Variable.Value = sb2;
+                } else
+                {
+                    //It is a string!!
+                    //Console.WriteLine("Cannot assign an integer a string!");
+                    
+                    Variable.Value = sb;
+                }
+               
+
+            } catch (Exception ex)
+            {
+                Console.WriteLine("Issue setting input value.");
+            }
+
+            
             //Console.WriteLine("Variable value: " + Variable.Value);
 
         }
