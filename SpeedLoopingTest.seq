@@ -1,0 +1,11 @@
+program()
+{
+	println("Welecome to the speed test of seqc!");
+	
+	forcycle(integer i = 0, i < 74670, i++)
+	{
+		print("Repeating... Time #");
+		print(i);
+		println("");
+	}	
+}
