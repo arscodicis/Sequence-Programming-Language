@@ -1,0 +1,104 @@
+#! A basic text editor written in Sequence, called SeqEditor.
+
+
+#! Global variables:
+string globalPath = "";
+string readFileContents = "";
+integer menuSelection = 0;
+
+#! Print the startup menu and handle events.
+printhandleMenu(){
+		println("");
+		println("SeqEditor========================>");
+		println("");
+		println("1 = New File");
+		println("2 = Open File");
+		println("3 = Exit");
+		print("Enter your selection: ");
+		input = menuSelection;
+		
+		if(menuSelection == 1){
+			#! Create a new file
+			run editorNewFile("");
+			
+		} else {
+			
+			if(menuSelection == 2){
+				#! Open a new file with a "dialog"
+				println("Open file====================>");
+				string fileToOpen = "";
+				print("Enter path of the file to open: ");
+				input = fileToOpen;
+				globalPath = fileToOpen;
+				run readtext(fileToOpen);
+				
+			} else {
+				if(menuSelection == 3){
+					#! Exit. Do nothing.
+					
+				} else {
+					println("Invalid option. Please try again.");
+					run printhandleMenu();
+				}
+			}
+			
+		}
+	
+
+}
+
+#! Handle reading/writing to files.
+readtext(string pathrecieved){
+			#! Read from the file.
+			string readPath = pathrecieved;
+			fileread = pathrecieved;
+			readFileContents = pathrecieved;
+			run editor(readFileContents);
+						
+		
+}
+
+#! Prints the text-editing menu.
+printtexteditingmenu(string path){
+		
+
+
+}
+
+editorNewFile(string fileContents){
+	println("");
+	println("Type \x to exit==========================>");
+	println("");
+	println(fileContents);
+	
+	string content = "";
+	inputConsecutive = content;
+	
+	println(globalPath);
+	filewrite = content;
+	
+}
+
+editor(string fileContents){
+	println("");
+	println("Type \x to exit==========================>");
+	println("");
+	println(fileContents);
+	
+	string content = "";
+	inputConsecutive = content;
+	
+	println(globalPath);
+	clearfile = globalPath;
+	filewrite = fileContents;
+	filewrite = content;
+	
+}
+
+
+#! Main class
+program() {
+		run printhandleMenu();
+
+
+}
