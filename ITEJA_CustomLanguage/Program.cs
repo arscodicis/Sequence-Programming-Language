@@ -26,7 +26,7 @@ namespace ITEJA_CustomLanguage
 
                 if(args[i] == "--version")
                 {
-                    Console.WriteLine("Sequence v2.3");
+                    Console.WriteLine("Sequence v2.4");
                 } else if(args[i] == "--path")
                 {
                     Console.WriteLine("");
@@ -50,6 +50,11 @@ namespace ITEJA_CustomLanguage
                     Console.WriteLine("Sequence © 2022 PIRUX, LLC");
                     Console.WriteLine("The vision of Sequence is that programming would be simplified to mere sequence; easy to read, easy to write.");
 
+                }
+
+                else if(args[i] == "-seq")
+                {
+                    Console.WriteLine("The magic of compilers...\nCompiled...\nInto one powerful language...\nCross platform: Windows-Mac-Linux\nFeel the power...\nThe simplicity...\nThe glory...\nOf sequencial programming.\nSequence.");
                 }
 
                 else

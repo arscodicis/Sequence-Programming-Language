@@ -100,8 +100,76 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree
                 {
                     ReadFile();
                 }
+                else if (newToken.Type == TokenType.ReadConsecutiveText)
+                {
+                    InputConsecutivly();
+                }
+                else if (newToken.Type == TokenType.SaveFile)
+                {
+                    WriteFile();
+                }
+                else if (newToken.Type == TokenType.ClearFile)
+                {
+                    ClearFile();
+                }
             }
         }
+
+        private void ClearFile()
+        {
+            ClearFileStatment clearFileStatment = new ClearFileStatment();
+            //CheckAndRemoveLeftParenthesis();
+            CheckAndRemoveEqualsSign();
+            //Console.WriteLine("Audio");
+            //CheckAndRemoveLeftParenthesis();
+            if (tokenStack.Peek().Type == TokenType.Identifier)
+            {
+                clearFileStatment.Variable = MainClass.FindIdentifier(parentBodyStatements.Peek(), tokenStack.Pop().Value);
+
+            }
+
+
+            parentBodyStatements.Peek().Statements.Add(clearFileStatment);
+            //Console.WriteLine("TestSyntax!");
+        }
+
+        private void WriteFile()
+        {
+            WriteFileStatment writeFileStatment = new WriteFileStatment();
+            //CheckAndRemoveLeftParenthesis();
+            CheckAndRemoveEqualsSign();
+            //Console.WriteLine("Audio");
+            //CheckAndRemoveLeftParenthesis();
+            if (tokenStack.Peek().Type == TokenType.Identifier)
+            {
+                writeFileStatment.Variable = MainClass.FindIdentifier(parentBodyStatements.Peek(), tokenStack.Pop().Value);
+
+            }
+
+
+            parentBodyStatements.Peek().Statements.Add(writeFileStatment);
+            //Console.WriteLine("TestSyntax!");
+        }
+
+        private void InputConsecutivly()
+        {
+            ConsecutiveInputStatment inputConsecutivly = new ConsecutiveInputStatment();
+            //CheckAndRemoveLeftParenthesis();
+            CheckAndRemoveEqualsSign();
+            //Console.WriteLine("Audio");
+            //CheckAndRemoveLeftParenthesis();
+            if (tokenStack.Peek().Type == TokenType.Identifier)
+            {
+                inputConsecutivly.Variable = MainClass.FindIdentifier(parentBodyStatements.Peek(), tokenStack.Pop().Value);
+
+            }
+
+
+            parentBodyStatements.Peek().Statements.Add(inputConsecutivly);
+            //Console.WriteLine("TestSyntax!");
+        }
+
+
 
         private void ReadFile()
         {

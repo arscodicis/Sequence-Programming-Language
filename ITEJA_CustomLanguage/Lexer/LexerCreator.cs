@@ -29,7 +29,10 @@ namespace ITEJA_CustomLanguage.Lexer
             {"randint", TokenType.Randint},
             {"play", TokenType.Audio},
             {"sleep", TokenType.Sleep},
-            {"fileread", TokenType.ReadFile}
+            {"fileread", TokenType.ReadFile},
+            {"filewrite", TokenType.SaveFile},
+            {"inputConsecutive", TokenType.ReadConsecutiveText},
+            {"clearfile", TokenType.ClearFile}
         };
         /// <summary>
         /// Dictionary with all operators and punctators 

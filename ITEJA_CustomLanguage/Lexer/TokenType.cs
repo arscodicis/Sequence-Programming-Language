@@ -36,6 +36,9 @@
         Randint,
         Audio,
         Sleep,
-        ReadFile
+        ReadFile,
+        ReadConsecutiveText,
+        SaveFile,
+        ClearFile
     }
 }

@@ -12,7 +12,7 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
     /// <summary>
     /// Prints results to the console.
     /// </summary>
-    public class ReadFileStatment : IStatement
+    public class WriteFileStatment : IStatement
     {
         /// <summary>
         /// Variable that will be printed to the console
@@ -32,18 +32,18 @@ namespace ITEJA_CustomLanguage.AbstractSyntaxTree.LogicBlocks.TokenClasses
         public void Execute()
         {
             //Console.WriteLine(Variable.Value);
+            Console.WriteLine("Enter path to save to: ");
+            string path = Console.ReadLine();
             try
             {
-                string s = Convert.ToString(File.ReadAllText(Convert.ToString(Variable.Value).Trim()));
-                StringBuilder sb = new StringBuilder();
-                _ = sb.Append(s);
-                Variable.Value = sb;
+                File.AppendAllText(path, "\n" + Convert.ToString(Variable.Value));
+                
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                Console.WriteLine("Error while reading file! Please check your path.");
+                Console.WriteLine("Error while writing to file! Please check your path.");
             }
         }
 
