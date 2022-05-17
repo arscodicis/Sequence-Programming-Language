@@ -21,7 +21,7 @@ IMPORTANT: Sequence only reads .seq files in plain-text. Make sure your extensio
 # Basics
 Every .seq file must include a main method, as with many other programming languages. An example is as follows:
 
-```
+```sequence
 program()
 {
 	#! Content
